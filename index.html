@@ -6,13 +6,19 @@
 <title>Boran Eşarp Tekstil</title>
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://esarp.borantekstil.com/">
-<script>
-  // Eski adres: uygulama ve site artık esarp.borantekstil.com'da. Adresteki parametreler (ör. ?kart=...) aynen taşınır.
-  location.replace('https://esarp.borantekstil.com/' + location.search);
-</script>
-<meta http-equiv="refresh" content="0; url=https://esarp.borantekstil.com/">
 </head>
-<body style="font-family:system-ui;text-align:center;padding:40px">
-<p>Yeni adresimize yönlendiriliyorsunuz: <a href="https://esarp.borantekstil.com/">esarp.borantekstil.com</a></p>
+<body style="font-family:system-ui;text-align:center;padding:40px;color:#22232a">
+<p>Boran Eşarp Tekstil açılıyor…</p>
+<script>
+  // Eski adres. Yeni site (esarp.borantekstil.com) güvenli açılabiliyorsa oraya, açılamıyorsa
+  // uygulamanın Google adresine gidilir. Adresteki parametreler (ör. ?kart=...) aynen taşınır.
+  var YENI = 'https://esarp.borantekstil.com/';
+  var UYGULAMA = 'https://script.google.com/macros/s/AKfycbwV9mnd_ndaK6w-nOSOwzATnAfg5hcZUhQwJtlf5jp6rMJFj4_J8t2l8YsglgRfw_uM/exec';
+  var gitti = false;
+  function git(adres) { if (gitti) return; gitti = true; location.replace(adres + location.search); }
+  setTimeout(function () { git(UYGULAMA); }, 5000);
+  fetch(YENI + '?denetim=' + Date.now(), { mode: 'no-cors', cache: 'no-store' })
+    .then(function () { git(YENI); }, function () { git(UYGULAMA); });
+</script>
 </body>
 </html>
