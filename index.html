@@ -3,24 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Boran Eşarp Tekstil - Yönetim</title>
-<link rel="icon" href="https://lh3.googleusercontent.com/d/1S5GDZgUoJ0c25ehNTahcEZD8gZEDaS00=s128">
-<link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/1S5GDZgUoJ0c25ehNTahcEZD8gZEDaS00=s180">
-<meta name="theme-color" content="#ffffff">
-<style>
-  html, body { margin: 0; height: 100%; background: #ffffff; overflow: hidden; }
-  iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; }
-</style>
-</head>
-<body>
-<!-- Uygulamanın kendisi ve verisi Google'da (Apps Script + Google Tablo) kalır; bu sayfa onu tam ekran gösterir. -->
-<iframe id="uygulama" title="Boran Eşarp Tekstil - Yönetim" allow="clipboard-read; clipboard-write; fullscreen"></iframe>
+<title>Boran Eşarp Tekstil</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://esarp.borantekstil.com/">
 <script>
-  var UYGULAMA = 'https://script.google.com/macros/s/AKfycbwV9mnd_ndaK6w-nOSOwzATnAfg5hcZUhQwJtlf5jp6rMJFj4_J8t2l8YsglgRfw_uM/exec';
-  // Adresteki parametreler (ör. ?kart=...) uygulamaya aynen geçer; alan=1 çıkışta bu adrese dönmeyi sağlar
-  var p = new URLSearchParams(location.search);
-  p.set('alan', '1');
-  document.getElementById('uygulama').src = UYGULAMA + '?' + p.toString();
+  // Eski adres: uygulama ve site artık esarp.borantekstil.com'da. Adresteki parametreler (ör. ?kart=...) aynen taşınır.
+  location.replace('https://esarp.borantekstil.com/' + location.search);
 </script>
+<meta http-equiv="refresh" content="0; url=https://esarp.borantekstil.com/">
+</head>
+<body style="font-family:system-ui;text-align:center;padding:40px">
+<p>Yeni adresimize yönlendiriliyorsunuz: <a href="https://esarp.borantekstil.com/">esarp.borantekstil.com</a></p>
 </body>
 </html>
